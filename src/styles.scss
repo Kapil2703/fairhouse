@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #00204a;
+$secondary: #005555;
+$font-family-sans-serif: 'Work Sans', sans-serif;
+$font-family-sans-serif-secondary: 'Work Sans', sans-serif;
+
+@import  "../node_modules/bootstrap/scss/bootstrap";
+
+@import 'assets/site-navbar';
+@import 'assets/site-base';
+@import 'assets/site-blocks';
+@import 'assets/site-footer';

@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-import { HousingLocation } from './housing-location';
-
-
+import { Component, OnInit } from '@angular/core';
+import { HousingLocation } from 'src/app/housing-location';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AppComponent {
+export class HomeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
   housingLocationList: HousingLocation[] = [
     {
       name: "Acme Fresh Start Housing",
@@ -44,4 +48,5 @@ export class AppComponent {
   updateSelectedLocation(location: HousingLocation) {
     this.selectedLocation = location;
   }
+
 }

@@ -1,0 +1,23 @@
+<!-- Header -->
+
+<app-header></app-header>
+
+<app-housing-list [locationList]="housingLocationList" (locationSelectedEvent)="updateSelectedLocation($event)" ></app-housing-list>
+<!-- Content -->
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+      <article>
+        <ng-container *ngIf="selectedLocation">
+        <img [src]="selectedLocation.photo">
+        <p>{{selectedLocation.name}}</p>
+        <p>{{selectedLocation.availableUnits}}</p>
+        <p>{{selectedLocation.city}}, {{selectedLocation.state}}</p>
+        <p>{{selectedLocation.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
+        <p>{{selectedLocation.wifi ? "Has wifi" : "Does Not have wifi"}}</p>
+        </ng-container>
+       </article>
+    </div>
+  </div>
+
+<!-- Footer -->
+<app-footer></app-footer>
